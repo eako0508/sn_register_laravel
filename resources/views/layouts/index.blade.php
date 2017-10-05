@@ -25,17 +25,21 @@
 					<th>Product Serial Number</th>
 					<th>HDD</th>
 					<th>HDD Serial Number</th>
-					<th>Date</th>
+					<th>Created</th>
+					<th>Last Updated</th>
 				</tr>
-				<tr>
-					<td>something</td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-					<td></td>
-				</tr>
+				@foreach($table as $db)
+					<tr>
+					<td>{{$db->company}}</td>
+					<td>{{$db->invoice}}</td>
+					<td>{{$db->product}}</td>
+					<td>{{$db->product_sn}}</td>
+					<td>{{$db->hdd}}</td>
+					<td>{{$db->hdd_sn}}</td>
+					<td>{{$db->created_at}}</td>
+					<td>{{$db->updated_at}}</td>
+					</tr>
+				@endforeach
 			</table>
 		</section>
 @endsection
@@ -45,5 +49,5 @@
 @endsection
 
 @section('js')
-    <script src="{{URL::asset('js/main.js')}}"></script>
+<script src="{{URL::asset('js/main.js')}}"></script>
 @endsection

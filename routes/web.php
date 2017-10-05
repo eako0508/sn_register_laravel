@@ -10,7 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
 Route::get('/', function () {
-    return view('layouts.index');
+	$table = App\Sn_table::orderBy('created_at','desc')->take(30)->get()->reverse();
+    return view('layouts.index', compact('table'));
 });
