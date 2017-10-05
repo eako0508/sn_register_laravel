@@ -4,7 +4,8 @@
 
 @section('content')
 		<section class='snr-section-form'>
-			<form class='js-form'>
+			<form class='js-form' method='post' action='/posts'>
+				{{csrf_field()}}
 				<input type="text" name="company_name" placeholder="Company Name" autofocus required>
 				<input type="text" name="invoice" placeholder="Invoice number" required>	
 				<input type="text" name="product" placeholder="Product">

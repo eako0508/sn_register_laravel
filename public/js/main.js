@@ -1,6 +1,8 @@
+/*
 $(".js-form").submit(event=>{
 	event.preventDefault();
 });
+*/
 $(window).scroll(function() {
 	sessionStorage.scrollTop = $(this).scrollTop();
 });
