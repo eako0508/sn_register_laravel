@@ -1,29 +1,8 @@
-<!DOCTYPE html>
-<html lang='en'>
-<head>
-	<title>@yield('title')</title>
-	<link rel="stylesheet" type="text/css" href="{{URL::asset('css/main.css')}}">
-	
-</head>
-<body>
-	@yield('nav')
-	<main>
-		<nav role='banner'>
-			<a href="">Serial Number Registration</a>
-			<a href="">Product Register</a>
-			<a href="">Search</a>
-			<a href="">Old Serial Search</a>
-		</nav>
+@extends('layouts.temp')
 
-		<h1 id='title'>@yield('title')</h1>
-		<!--
-		
-		<div id='form_pt1'>
-		
-		-->
+@section('title', 'Serial Number Registration')
 
-		@yield('snr-section-form')
-		<!--
+@section('content')
 		<section class='snr-section-form'>
 			<form class='js-form'>
 				<input type="text" name="company_name" placeholder="Company Name" autofocus required>
@@ -35,7 +14,7 @@
 				<input type="submit" name="submit">
 			</form>
 		</section>
-		-->
+
 		<section id='section_table'>	
 			<table id='list' >
 				<tr>
@@ -59,8 +38,12 @@
 				</tr>
 			</table>
 		</section>
-	</main>
-	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+@endsection
+
+@section('css')
+	<link rel="stylesheet" type="text/css" href="{{URL::asset('css/main.css')}}">
+@endsection
+
+@section('js')
     <script src="{{URL::asset('js/main.js')}}"></script>
-</body>
-</html>
+@endsection
