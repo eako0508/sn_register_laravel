@@ -1,0 +1,6 @@
+	<nav role='banner'>
+		<a href="">Serial Number Registration</a>
+		<a href="">Product Register</a>
+		<a href="">Search</a>
+		<a href="">Old Serial Search</a>
+	</nav>
