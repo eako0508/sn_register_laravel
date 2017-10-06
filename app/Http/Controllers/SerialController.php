@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-//use Illuminate\Http\Request;
+use Illuminate\Http\Request;
 use App\Sn_table;
 class SerialController extends Controller
 {
@@ -33,10 +33,12 @@ class SerialController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store()
     {
-        //
-		dd(request()->all());
+		//dd(request()->all());
+		Sn_table::create(request(['company','invoice','product','product_sn','hdd','hdd_sn']));
+
+		return redirect('/');
     }
 
     /**

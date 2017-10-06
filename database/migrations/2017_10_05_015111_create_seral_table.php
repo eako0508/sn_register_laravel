@@ -17,10 +17,10 @@ class CreateSeralTable extends Migration
             $table->increments('id');
 			$table->string('company');
 			$table->integer('invoice');
-			$table->string('product');
-			$table->string('product_sn');
-			$table->string('hdd');
-			$table->string('hdd_sn');
+			$table->string('product')->nullable();
+			$table->string('product_sn')->nullable();
+			$table->string('hdd')->nullable();
+			$table->string('hdd_sn')->nullable();
             $table->timestamps();
         });
     }
