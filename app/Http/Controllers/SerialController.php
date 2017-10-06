@@ -83,6 +83,35 @@ class SerialController extends Controller
      */
     public function destroy($id)
     {
-        //
+		//$id;
+		Sn_table::where('id',$id)->delete();
+		return redirect('/');
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
