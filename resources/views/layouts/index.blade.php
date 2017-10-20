@@ -18,7 +18,7 @@
 
 		<section id='section_table'>	
 			<table id='list' >
-				<tr>
+				<tr id='table_title'>
 					<th>Company</th>
 					<th>Invoice Number</th>
 					
@@ -30,23 +30,6 @@
 					<th>Last Updated</th>
 					<th>Edit</th>
 				</tr>
-				@foreach($table as $db)
-					<tr>
-						<form class='js-edit' method='post' action='/delete/{{$db->id}}'>
-						{{csrf_field()}}
-						<input type='hidden' name='_method' value='DELETE'>
-						<td>{{$db->company}}</td>
-						<td>{{$db->invoice}}</td>
-						<td>{{$db->product}}</td>
-						<td>{{$db->product_sn}}</td>
-						<td>{{$db->hdd}}</td>
-						<td>{{$db->hdd_sn}}</td>
-						<td>{{$db->created_at}}</td>
-						<td>{{$db->updated_at}}</td>
-						<td><input type='submit' class='button edit-btn' value='Remove'></td>
-						</form>
-					</tr>
-				@endforeach
 			</table>
 		</section>
 @endsection

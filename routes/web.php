@@ -19,3 +19,6 @@ Route::get('/', function () {
 Route::get('/', 'SerialController@index');
 Route::post('/posts', 'SerialController@store');
 Route::delete('/delete/{id}', 'SerialController@destroy');
+
+
+

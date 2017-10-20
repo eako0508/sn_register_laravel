@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Response;
 use App\Sn_table;
 class SerialController extends Controller
 {
@@ -12,9 +13,15 @@ class SerialController extends Controller
      * @return \Illuminate\Http\Response
      */
 	public function index(){
-
+		/*
 		$table = Sn_table::orderBy('created_at', 'DESC')->take(30)->get()->reverse();
 		return view('layouts.index', compact('table'));
+		*/
+		return view('layouts.index');
+		/*
+		$result = Sn_table::orderBy('created_at', 'DESC')->take(30)->get()->reverse();
+		return view('layouts.index', compact('result');
+		*/
     }
 
     /**
@@ -35,10 +42,13 @@ class SerialController extends Controller
      */
     public function store()
     {
+		/*
 		//dd(request()->all());
 		Sn_table::create(request(['company','invoice','product','product_sn','hdd','hdd_sn']));
 
 		return redirect('/');
+		*/
+
     }
 
     /**
@@ -84,9 +94,16 @@ class SerialController extends Controller
     public function destroy($id)
     {
 		//$id;
+		/*
 		Sn_table::where('id',$id)->delete();
 		return redirect('/');
+		*/
     }
+
+	public function lookup(){
+		$table = Sn_table::orderBy('created_at', 'DESC')->take(30)->get()->reverse();
+		return Response::json($table);
+	}
 }
 
 
