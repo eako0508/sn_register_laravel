@@ -101,8 +101,17 @@ class SerialController extends Controller
     }
 
 	public function lookup(){
-		$table = Sn_table::orderBy('created_at', 'DESC')->take(30)->get()->reverse();
+		$table = Sn_table::orderBy('created_at', 'DESC')->take(30)->get();
 		return Response::json($table);
+	}
+
+
+	public function api_add(){
+		Sn_table::create(request(['company','invoice','product','product_sn','hdd','hdd_sn']));
+		$item = Sn_table::orderBy('created_at', 'DESC')->first();
+
+		return Response::json($item);
+
 	}
 }
 

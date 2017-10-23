@@ -4,14 +4,14 @@
 
 @section('content')
 		<section class='snr-section-form'>
-			<form class='js-form' method='post' action='/posts'>
+			<form class='js-form' action='#'>
 				{{csrf_field()}}
-				<input type="text" name="company" placeholder="Company Name" autofocus required>
-				<input type="text" name="invoice" placeholder="Invoice number" required>	
-				<input type="text" name="product" placeholder="Product">
-				<input type="text" name="product_sn" placeholder="Product serial number">
-				<input type="text" name="hdd" placeholder="HDD type">
-				<input type="text" name="hdd_sn" placeholder="HDD serial number">	
+				<input type="text" name="company" id='company' placeholder="Company Name" autofocus required>
+				<input type="text" name="invoice" id='invoice' placeholder="Invoice number" required>	
+				<input type="text" name="product" id='product' placeholder="Product">
+				<input type="text" name="product_sn" id='product_sn' placeholder="Product serial number">
+				<input type="text" name="hdd" id='hdd' placeholder="HDD type">
+				<input type="text" name="hdd_sn" id='hdd_sn' placeholder="HDD serial number">	
 				<input type="submit" name="submit">
 			</form>
 		</section>

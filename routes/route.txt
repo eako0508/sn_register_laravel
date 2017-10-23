@@ -1,0 +1,2 @@
+Route::post('/posts', 'SerialController@store');
+Route::delete('/delete/{id}', 'SerialController@destroy');

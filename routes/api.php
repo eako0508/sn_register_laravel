@@ -31,3 +31,6 @@ Route::get('sn_table/{id}', function($id){
 */
 
 Route::get('/sn_table', 'SerialController@lookup');
+Route::post('/posts', 'SerialController@store');
+Route::delete('/delete/{id}', 'SerialController@destroy');
+Route::get('/add', 'SerialController@api_add');
